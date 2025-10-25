@@ -1,0 +1,108 @@
+💾 INSTALLATION & GUIs
+
+Git is a free and open-source distributed version control system that powers all GitHub operations on your local machine.
+It helps you track changes, collaborate, and manage code efficiently.
+
+GitHub for Windows: https://windows.github.com
+
+GitHub for Mac: https://mac.github.com
+
+Git for All Platforms: http://git-scm.com
+
+💡 GitHub is free for students and teachers at education.github.com
+
+⚙️ SETUP
+
+Configuring user information used across all local repositories
+
+git config --global user.name "[firstname lastname]"    # Set your Git username
+git config --global user.email "[valid-email]"          # Set your Git email address
+git config --global color.ui auto                       # Enable colored command output
+
+🏗️ SETUP & INIT
+
+Configuring user information, initializing, and cloning repositories
+
+git init                       # Initialize an existing directory as a Git repository
+git clone [url]                 # Clone an existing repository from a remote URL
+
+📸 WORKING WITH SNAPSHOTS & THE STAGING AREA
+
+Managing changes and preparing commits
+
+git status                      # Show modified files in working directory
+git add [file]                  # Stage a file for the next commit
+git reset [file]                # Unstage a file but keep changes
+git diff                        # Show unstaged changes
+git diff --staged               # Show staged but uncommitted changes
+git commit -m "[message]"       # Commit staged files with a descriptive message
+
+🌿 BRANCH & MERGE
+
+Isolate work, switch contexts, and integrate changes
+
+git branch                      # List branches ( * marks the active one )
+git branch [branch-name]        # Create a new branch
+git checkout [branch-name]      # Switch to another branch
+git merge [branch]              # Merge specified branch into the current one
+git log                         # Show commit history for the current branch
+
+🔄 SHARE & UPDATE
+
+Syncing repositories and collaborating with remotes
+
+git remote add [alias] [url]    # Add a remote repository alias
+git fetch [alias]               # Fetch branches from the remote
+git merge [alias]/[branch]      # Merge remote branch into your current branch
+git push [alias] [branch]       # Push local commits to remote
+git pull                        # Fetch and merge from the remote tracking branch
+
+📂 TRACKING PATH CHANGES
+
+Versioning file removals and renames
+
+git rm [file]                   # Remove file and stage deletion
+git mv [old-path] [new-path]    # Rename or move a file
+git log --stat -M               # Show commit logs with file move statistics
+
+🕒 TEMPORARY COMMITS (Stashing)
+
+Temporarily save changes to work on something else
+
+git stash                       # Save modified and staged changes
+git stash list                  # List stashed changes
+git stash pop                   # Apply the latest stash and remove it
+git stash drop                  # Discard the latest stash
+
+🧩 REWRITE HISTORY
+
+Rebasing, resetting, and cleaning up commit history
+
+git rebase [branch]             # Apply current branch commits ahead of another
+git reset --hard [commit]       # Reset working directory and staging area to a commit
+
+🔍 INSPECT & COMPARE
+
+View logs, differences, and object info
+
+git log                         # Show commit history for the current branch
+git log branchB..branchA         # Commits in branchA not in branchB
+git log --follow [file]          # Show changes to a file (even after renames)
+git diff branchB...branchA       # Diff of changes between branches
+git show [SHA]                   # Display details of a specific commit
+
+🚫 IGNORING PATTERNS
+
+Prevent unwanted files from being staged or committed
+
+git config --global core.excludesfile [file]   # Global ignore file
+
+
+Example .gitignore file:
+
+logs/
+*.notes
+pattern*/
+
+
+Save as .gitignore in your project root.
